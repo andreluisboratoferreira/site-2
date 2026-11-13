@@ -1,0 +1,117 @@
+.mensagem {
+  position: relative;
+  width: fit-content;
+  max-width: min(90%, 48rem);
+  box-sizing: border-box;
+  align-self: flex-start;
+  padding: 0.75rem 1rem;
+  border: 1px solid #3c4043;
+  border-radius: 1.25rem 1.25rem 1.25rem 0.35rem;
+  background-color: #303134;
+  color: #e8eaed;
+  font-style: normal;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+}
+
+.mensagem::before {
+  position: absolute;
+  bottom: 0;
+  left: -0.4rem;
+  width: 0;
+  height: 0;
+  border-right: 0.45rem solid #303134;
+  border-top: 0.45rem solid transparent;
+  content: '';
+}
+
+.mensagem--user {
+  align-self: flex-end;
+  border-radius: 1.25rem 1.25rem 0.35rem 1.25rem;
+  background-color: #303b50;
+}
+
+.mensagem--user::before {
+  right: -0.4rem;
+  left: auto;
+  border-right: 0;
+  border-left: 0.45rem solid #303b50;
+}
+
+.mensagem p {
+  margin: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.mensagem p + p {
+  margin-top: 0.75rem;
+}
+
+.mensagem code,
+.mensagem pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-style: normal;
+}
+
+.mensagem :not(pre) > code {
+  padding: 0.12rem 0.35rem;
+  border: 1px solid #45474b;
+  border-radius: 0.3rem;
+  background-color: #202124;
+  color: #c3dafe;
+}
+
+.mensagem__bloco-codigo {
+  min-width: 0;
+  margin: 0.75rem 0;
+  overflow: hidden;
+  border: 1px solid #45474b;
+  border-radius: 0.65rem;
+  background-color: #1b1c1e;
+}
+
+.mensagem__cabecalho-codigo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid #45474b;
+  color: #bdc1c6;
+  font-size: 0.8rem;
+}
+
+.mensagem__copiar {
+  padding: 0.3rem 0.65rem;
+  border: 1px solid #5f6368;
+  border-radius: 0.4rem;
+  background-color: #303134;
+  color: #e8eaed;
+  cursor: pointer;
+  font: inherit;
+}
+
+.mensagem__copiar:hover {
+  background-color: #3c4043;
+}
+
+.mensagem__copiar:focus-visible {
+  outline: 2px solid #8ab4f8;
+  outline-offset: 2px;
+}
+
+.mensagem__bloco-codigo pre {
+  max-width: 100%;
+  margin: 0;
+  padding: 0.85rem;
+  overflow-x: auto;
+  color: #e8eaed;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.mensagem__erro-copia {
+  padding: 0 0.85rem 0.65rem;
+  color: #f28b82;
+  font-size: 0.85rem;
+}
